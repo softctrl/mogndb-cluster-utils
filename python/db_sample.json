@@ -1,0 +1,26 @@
+{
+  "name": "dbsample",
+  "user": "dbsample",
+  "password": "123456",
+  "shard": true,
+  "collections": [
+    {
+      "name": "collection0",
+      "shard": true,
+      "indexes": [
+        {
+          "name": "field0",
+          "asc": true
+        }
+      ]
+    },
+    {
+      "name": "collection1",
+      "shard": false
+    },
+    {
+      "name": "collection2",
+      "shard": true
+    }
+  ]
+}
