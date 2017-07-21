@@ -1,0 +1,6 @@
+{
+  "user":"mongodb",
+  "password":"mongodb", 
+  "server":"192.168.0.1",
+  "port":27017
+}
