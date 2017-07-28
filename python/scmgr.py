@@ -43,8 +43,7 @@ def connect_mongodb():
 
     config = load_admin_database_config()
     if not config:
-        print('It was not possible to identify the admin connection configuration file.')
-        return None
+        raise Exception('It was not possible to identify the admin connection configuration file.')
 
     usr = config['user']
     pwd = config['password']
@@ -139,13 +138,21 @@ def create_collection_index(collection, index_name, index_sort=ASCENDING, ttl=-1
     return res
 
 
+def create_data():
+    None
+
+
+def drop_database():
+    None
+
+
 # This method performs all creations and configurations
 # on the mongodb Shard for the informed database.
 # Be careful.
 def process_database(db_config):
 
     if not db_config:
-        return
+        raise Exception('There is no valid database configuration.')
 
     db_name = db_config['name']
 
